@@ -21,6 +21,76 @@ app.get('/tico', (req, res) => {
     console.log("Just got a request!")
     res.send('teco')
 })
+
+app.get('/pokemons', (req, res) => {
+    console.log("Just got a request!")
+    res.json({
+  "ash_pokemon_capturados": [
+    {
+      "numero": 25,
+      "nome": "Pikachu",
+      "tipo": ["Elétrico"],
+      "capturado_em": "Pallet Town"
+    },
+    {
+      "numero": 16,
+      "nome": "Pidgeotto",
+      "tipo": ["Normal", "Voador"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 19,
+      "nome": "Rattata",
+      "tipo": ["Normal"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 12,
+      "nome": "Butterfree",
+      "tipo": ["Inseto", "Voador"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 23,
+      "nome": "Ekans",
+      "tipo": ["Veneno"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 4,
+      "nome": "Charmander",
+      "tipo": ["Fogo"],
+      "capturado_em": "Route 3"
+    },
+    {
+      "numero": 7,
+      "nome": "Squirtle",
+      "tipo": ["Água"],
+      "capturado_em": "Route 24"
+    },
+    {
+      "numero": 13,
+      "nome": "Weedle",
+      "tipo": ["Inseto", "Veneno"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 14,
+      "nome": "Kakuna",
+      "tipo": ["Inseto", "Veneno"],
+      "capturado_em": "Viridian Forest"
+    },
+    {
+      "numero": 3,
+      "nome": "Venusaur",
+      "tipo": ["Planta", "Veneno"],
+      "capturado_em": "Kanto"
+    }
+  ]
+}
+)
+    })
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
