@@ -24,8 +24,7 @@ app.get('/tico', (req, res) => {
 
 app.get('/pokemons', (req, res) => {
     console.log("Just got a request!")
-    res.json({
-  "ash_pokemon_capturados": [
+    res.json([
     {
       "numero": 25,
       "nome": "Pikachu",
@@ -87,9 +86,38 @@ app.get('/pokemons', (req, res) => {
       "capturado_em": "Kanto"
     }
   ]
+)
+})
+
+app.get("/series", (req, res) => {
+  console.log("Just got a request!")
+  res.json({
+  "meus_3_seriados_favoritos": [
+    {
+      "titulo": "Breaking Bad",
+      "genero": ["Crime", "Drama", "Suspense"],
+      "ano_inicial": 2008,
+      "ano_final": 2013,
+      "sinopse": "A história de Walter White, um professor de química que, ao ser diagnosticado com câncer terminal, decide se envolver no tráfico de drogas para garantir o futuro financeiro de sua família."
+    },
+    {
+      "titulo": "Game of Thrones",
+      "genero": ["Fantasia", "Drama", "Ação"],
+      "ano_inicial": 2011,
+      "ano_final": 2019,
+      "sinopse": "Em um mundo medieval fictício, várias famílias lutam pelo controle do Trono de Ferro e pela supremacia em Westeros, enquanto forças sobrenaturais ameaçam a humanidade."
+    },
+    {
+      "titulo": "Stranger Things",
+      "genero": ["Ficção científica", "Mistério", "Terror"],
+      "ano_inicial": 2016,
+      "ano_final": "Em andamento",
+      "sinopse": "Um grupo de crianças tenta desvendar os mistérios e confrontar criaturas sobrenaturais na cidade de Hawkins, onde eventos estranhos estão acontecendo após o desaparecimento de um amigo."
+    }
+  ]
 }
 )
-    })
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
