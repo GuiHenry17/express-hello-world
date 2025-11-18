@@ -14,7 +14,7 @@ app.get('/req', (req, res) => {
 
 app.get('/meunome', (req, res) => {
     console.log("Just got a request!")
-    res.send('teco')
+    res.send('Meu nome é Guilherme Henrique Santos Pereira!')
 })
 
 app.get('/tico', (req, res) => {
